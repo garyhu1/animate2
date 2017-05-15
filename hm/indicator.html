@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,">
+		<title>指示条</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#indicator {
+				position: relative;
+				width: 100px;
+				margin: 20px auto;
+			}
+			p {
+				width: 100px;
+				height: 40px;
+				line-height: 40px;
+				background: blanchedalmond;
+				text-align: center;
+			}
+			.show {
+				position: absolute;
+				height: 3px;
+				background: darkmagenta;
+				margin: 0 auto;
+			}
+			#indicator:hover .show{
+				animation: show .5s ease;
+				animation-fill-mode: forwards;
+			}
+			@keyframes show {
+				0% {
+					left: 50%;
+					width: 0;
+				}
+				100% {
+					left: 0;
+					width: 100px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="indicator">
+			<p>点击显示</p>
+			<div class="show"></div>
+		</div>
+	</body>
+</html>
