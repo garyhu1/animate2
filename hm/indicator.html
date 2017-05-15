@@ -13,6 +13,7 @@
 				position: relative;
 				width: 100px;
 				margin: 20px auto;
+				cursor: pointer;
 			}
 			p {
 				width: 100px;
@@ -30,6 +31,10 @@
 			#indicator:hover .show{
 				animation: show .5s ease;
 				animation-fill-mode: forwards;
+			}
+			#indicator:hover p{
+				opacity: 0.7;
+				filter: alpha(opacity=0.7);
 			}
 			@keyframes show {
 				0% {
